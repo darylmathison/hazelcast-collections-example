@@ -6,12 +6,14 @@
 
 package hazelcastcollections.iqueue;
 
-import com.hazelcast.core.QueueStore;
+import com.hazelcast.collection.QueueStore;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+
+
 /**
  *
  * @author Daryl
@@ -47,8 +49,7 @@ public class QueueQStore implements QueueStore<String> {
     @Override
     public Map<Long, String> loadAll(Collection<Long> clctn) {
         System.out.println("loadAll");
-        Map<Long, String> retMap = new TreeMap<>();
-        return retMap;
+        return new TreeMap<>();
     }
 
     @Override
